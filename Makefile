@@ -1,23 +1,17 @@
-TARGET := display
+TARGET := test2
 SRC := $(TARGET).c
 OBJ := $(TARGET).o
-SO := libdlink.so
-
 
 CFLAGS := -g -Wall
-LFLAGS := -lm -pthread
-SHAREDS := -shared
-CC := gcc $(CFLAGS) $(LFLAGS) 
+CC := gcc $(CFLAGS)
 
+export NAME := "/home/meit2302/cpi2302"
 
 all : $(TARGET)
 
-
 $(TARGET): $(OBJ) 
-	$(CC) $(SHAREDS) $(SRC) -fPIC -o $(SO)
-.c.o:
-	$(CC) -c $^
+	gcc -o test2 test2.c -L. -ldlink
+
 clean:
 	rm -f $(TARGET) $(OBJ)
-	rm -f libdlink $(SO)
 
