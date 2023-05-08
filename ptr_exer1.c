@@ -10,7 +10,6 @@ char **get_modify_str_ary(char *ptr){
     char add_str[][2] = {"e", "e", "a"};
 	
 	strcat(ptr, add_str[count]);
-    //printf("%s\n", ptr);
 
 	count++;
 }
@@ -35,7 +34,3 @@ int main(int argc, char *argv[])
 
     return 0;
 }
-
-//char **get_modify_str_ary(char *ptr){
-//    char add_str[][2] = {"e", "e", "a"};
-//}
